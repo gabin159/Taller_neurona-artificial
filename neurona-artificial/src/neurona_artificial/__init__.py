@@ -51,6 +51,13 @@ def entrenar_neurona(
     )  # Se asigna un peso inicial aleatorio para la humedad y otro para la temperatura[cite: 1]
     sesgo = 0.0  # El sesgo (bias) inicializa en cero[cite: 1]
 
+    # --- LÍNEA PARA MOSTRAR LA CONFIGURACIÓN DE ÉPOCAS Y TASA DE APRENDIZAJE ---
+    if verbose:
+        print(
+            f"Configuración de entrenamiento: Épocas = {epocas} | Tasa de aprendizaje = {tasa_aprendizaje}"
+        )
+        print("-" * 65)
+
     # Determinamos el intervalo de impresión según el total de épocas
     intervalo = max(1, epocas // 5)
 
